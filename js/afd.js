@@ -160,16 +160,28 @@ $(document).ready(function () {
         var hilera = $('#input_hil').val();
         $('#alert_eval').hide();
         if(regEx==""){
-            $('#p_eval').text('Ingrese una expresión r primero');
+            $('#p_eval').text('INGRESE UNA EXPRESIÓN REGULAR PRIMERO >:c');
+            document.getElementById("alert_eval").classList.remove("alert-default");
+            document.getElementById("alert_eval").classList.remove("alert-success");
+            document.getElementById("alert_eval").classList.remove("alert-danger");
+            document.getElementById("alert_eval").classList.add("alert-primary");
             $('#alert_eval').show();
         }else{
             var acep = valid(regEx,hilera); 
                  if(acep){
                     $('#p_eval').text('ACEPTADA');
+                    document.getElementById("alert_eval").classList.remove("alert-default");
+                    document.getElementById("alert_eval").classList.remove("alert-primary");
+                    document.getElementById("alert_eval").classList.remove("alert-danger");
+                    document.getElementById("alert_eval").classList.add("alert-success");
                     $('#alert_eval').show();
                      }   else {
-                         $('#p_eval').text('RECHAZADA');
-                         $('#alert_eval').show();  
+                        $('#p_eval').text('RECHAZADA');
+                        document.getElementById("alert_eval").classList.remove("alert-default");
+                        document.getElementById("alert_eval").classList.remove("alert-success");
+                        document.getElementById("alert_eval").classList.remove("alert-primary");
+                        document.getElementById("alert_eval").classList.add("alert-danger");
+                        $('#alert_eval').show(); 
              }
             }
         

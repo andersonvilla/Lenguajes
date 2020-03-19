@@ -1,13 +1,25 @@
 body{
-    background-image: url(1.jpeg);
-  /*   background-size: 100% 100%; */
-    background-attachment: fixed;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(1.jpeg);
+  background-attachment: fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 .well li, #input_regex, #input_hil {
-    font-family: Consolas;
+  font-family: Consolas;
+}
+
+.form-group h5{
+color: black;
+}
+
+.form-group .col-md-11 .form-control{
+color: black;
+}
+
+.form-group .col-md-11 .form-control::placeholder{
+color: blue;
+opacity: 0.45;
 }
